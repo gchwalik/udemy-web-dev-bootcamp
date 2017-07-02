@@ -1,0 +1,85 @@
+/*
+  Lorem Ipsum generators
+  http://theultralinx.com/2013/08/10-hilarious-lorem-ipsum-generators-web-designers/
+*/
+
+/* 
+Website that gives % of computers that come with 
+a particular/commonly used webdev font installed
+http://www.cssfontstack.com/
+*/
+
+/*font-family*/
+/*If using a font with a number in its name, must use quotes*/
+p {
+  font-family: Arial;
+}
+
+h1 {
+  font-family: Georgia;
+}
+
+/*font-size*/
+/*Different units we can use: px, em
+  - px is size in pixels
+  - em is size defined relative to the size of the font
+    on the parent of the current element
+*/
+body {
+  font-size: 10px;
+}
+
+h1 {
+  font-size: 5.0em;
+}
+
+p {
+  font-size: 2.0em;
+}
+
+span {
+  font-size: 2.0em;
+}
+
+/*font-weight*/
+/*Refers to how bold or light-weight the text is*/
+p {
+  font-weight: bold;
+}
+
+/*
+  Certain fonts will also let you use a number value 100-800
+  Must be an even 100
+
+  p {
+    font-weight: 100;
+  }
+*/
+ 
+/*line-height*/
+/*Controls the height of a given line*/
+/*Will multiply the height of the selected lines by the given number*/
+/*Increases whitespace around the text*/
+p {
+  line-height: 2;
+}
+
+/*text-align*/
+/*Controls if the text is aligned to left, right, or center*/
+h1 {
+  text-align: right;
+}
+
+p {
+  text-align: center;
+}
+
+/*text-decoration*/
+/*Gives things like overline, underline, strikethrough, etc*/
+p {
+  text-decoration: underline;
+}
+
+h1 {
+  text-decoration: line-through;
+}

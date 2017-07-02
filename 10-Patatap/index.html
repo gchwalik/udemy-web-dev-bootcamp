@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Circles</title>
+  <script type="text/javascript" src="paper-full.js"></script>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/1.1.28/howler.min.js"></script>
+</head>
+<body>
+
+
+  <canvas id="myCanvas" resize="true"></canvas>
+  <script type="text/paperscript" canvas="myCanvas">
+
+    var keyData = {
+      a: {
+        color: "purple",
+        sound: new Howl({
+          urls: ['sounds/bubbles.mp3'],
+          buffer: true
+        })
+      },
+      s: {
+        color: "green",
+        sound: new Howl({
+          urls: ['sounds/clay.mp3'],
+          buffer: true    
+        })
+      },
+      d: {
+        color: "red",
+        sound: new Howl({
+          urls: ['sounds/confetti.mp3'],
+          buffer: true    
+        })
+      }
+    }
+
+    var circles = [];
+
+    function onKeyDown(event) {
+      if(keyData[event.key]) {
+        var maxPoint = new Point(view.size.width, view.size.height);
+        var randomPoint = Point.random();
+        var point = maxPoint*randomPoint;
+
+        var newCircle = new Path.Circle(point, 100) ;
+        newCircle.fillColor = keyData[event.key].color;
+        keyData[event.key].sound.play();
+      
+        circles.push(newCircle);
+      }
+    }
+
+    function onFrame(event) {
+      for(var i=0; i<circles.length; i++) {
+        circles[i].fillColor.hue +=1;
+        circles[i].scale(.9);
+        if(circles[i].area < 1) {
+          circles[i].remove();
+          circles.splice(i,1);
+        }
+        console.log(circles);
+      }
+    }
+
+  </script>
+</body>
+</html>
+
+<!--  
+Sound from
+https://github.com/jonobr1/Neuronal-Synchrony
+
+Library to work with audio in JS
+https://howlerjs.com/
+-->

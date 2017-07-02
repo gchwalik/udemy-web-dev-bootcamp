@@ -1,0 +1,20 @@
+HTTP Requests
+- Client sends HTTP Request to a server
+- Server sends back an HTTP Response
+- HTTP requests are independant of browsers
+
+Use Postman to make HTTP requests and view the responses
+- https://www.getpostman.com/
+- Makes debugging a lot easier
+
+HTTP Verbs
+- GET - Read
+- POST - Create
+- PUT/PATCH - Update
+- DELETE - Delete
+
+3 Important Parts of every response
+- Body
+- Headers (like metadata about the response)
+- Status (standardized number that tells us how the request went)
+

@@ -1,0 +1,49 @@
+Intro to Backend
+- Review Internet Basics
+- Static vs Dynamic Sites
+- Stacks/Backend Technologies
+
+When we go to a URL, there is a couple of things that happens
+
+Finding the right address
+www.udemy.com -> 23.235.47.175
+- Your query is submitted to your ISP
+- Within your ISP, the DNS takes the Domain name and turns it into an IP address
+
+Going to that Address
+www.udemy.com -> 23.235.47.175
+- A request is sent to the desired IP address via HTTP
+- Your request finds the fastest path possible to the server with the specified IP
+- This is not a direct journey. It requires hopping from server to server until we arrive
+
+Udemy Server Responds
+www.udemy.com -> 23.235.47.175
+- The requested server figures out exactly what we're asking for
+- The server builds us the right content, often pulling information from database
+- The server responds with any combination of HTML, CSS, and Javascript
+- And then...
+
+It gets returned to the browser which renders it
+
+
+Static vs Dynamic
+Dynamic webpages are sites that are complied on the server side, where the server is pulling together or constructing a webpage before it's sent back as a response
+
+Stack
+All of the technologies that a particular application uses
+
+A Generic Stack
+- Backend Language/app
+- Server
+- Database
+---------------------------
+    |
+    v
+Stuff sent to Client-side
+- HTML, CSS, JS
+    |
+    v
+Then rendered
+
+Can use to see what the stack is for different companies
+- https://stackshare.io/

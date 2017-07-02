@@ -1,0 +1,22 @@
+/*
+  Element Selector: select all instances of a given element
+  ex: p, div, h1, etc
+*/
+li {
+  border: 2px solid red;
+}
+
+/*
+  ID Selector: Selects an elements with a given ID. 
+  Only one unique ID-name per page!
+  The point of an ID is to single something out, 
+  to target one individual element.
+*/
+#special {
+  background: yellow;
+}
+
+/* Class Selector: Selects all elements with a given class */
+.completed {
+  text-decoration: line-through;
+}

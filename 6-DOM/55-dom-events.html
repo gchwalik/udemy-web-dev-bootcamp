@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM Events</title>
+</head>
+<body>
+  <h1>DOM Events</h1>
+  <h2>Making things interactive</h2>
+
+  <button>First button</button>
+
+  <button>Click Me</button>
+
+  <button>Click Me Toooooo</button>
+  
+  <p>No One Has Clicked Me Yet</p>  
+
+  <ul>
+    <li>Orchids</li>
+    <li>Succulents</li>
+    <li>Tulips</li>
+  </ul>
+
+  <script type="text/javascript" src="55-script.js"></script>
+</body>
+</html>
+
+<!-- 
+Events are everywhere
+- Clicking on a button
+- Hovering over a link
+- Dragging and Dropping
+- Pressing the Enter key
+
+The Process
+We select an element and then add an "event listener"
+- "Listen for a click on this <button>"
+- "Listen for a hover event on the <h1>"
+- "Listen for a keypress event on text input"
+
+The Syntax
+To add a listener, we use a method called "addEventListener"
+- element.addEventListener(type, functionToCall);
+
+Example:
+var button = document.querySelector("button");
+button.addEventListener("click", function() {
+  console.log("clicked");
+});
+
+Another Example:
+HTML
+<button>Click Me</button>
+<p>No One Has Clicked Me Yet</p>
+
+JS
+var button = document.querySelector("button");
+var paragraph = document.querySelector("p");
+
+//Setup click listener
+button.addEventListener("click", function() {
+  paragraph.textContent = "Someone clicked the button";
+});
+
+
+
+-->

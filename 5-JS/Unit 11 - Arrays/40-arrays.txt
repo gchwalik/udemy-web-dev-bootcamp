@@ -1,0 +1,36 @@
+Arrays
+
+Objective 1: Define and add data to arrays
+Objective 2: Utilize built-in array methods
+Objective 3: Console Todo List
+
+----
+
+Objectives
+- Understand arrays conceptually
+- Write code using JS arrays
+
+var friends = ["Charlie", "Liz", "David", "Mattias"];
+
+//Arrays are indexed starting at 0
+
+friends[0]      //"Charlie"
+friends[2]      //"David"
+
+friends[0] = "Chuck";     //["Chuck", "Liz", "David", "Mattias"];
+friends[1] = "Lizzie";    //["Chuck", "Lizzie", "David", "Mattias"];
+
+friends[4] = "Amelie";    //["Charlie", "Liz", "David", "Mattias", "Amelie"];
+
+----
+
+//We can initialize an empty array two ways:
+var friends = [];           //no friends :(
+var friends = new Array()   //uncommon
+
+//Arrays can hold any type of data
+var random_collection = [49, true, "Hermione", null];
+
+//Arrays have a length property
+var nums = [45,37,89,24];
+nums.length     //4

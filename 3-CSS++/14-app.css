@@ -1,0 +1,14 @@
+/*Custom fonts can cost a lot of money*/
+/*Relying on fonts that someone has on their computer is limiting*/
+/*https://fonts.google.com*/
+h1 {
+  font-family: Indie Flower;
+}
+
+p {
+  font-family: Raleway;
+}
+
+p {
+  font-weight: normal;
+}

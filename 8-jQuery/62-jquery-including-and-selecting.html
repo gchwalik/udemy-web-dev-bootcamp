@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery Demo</title>
+</head>
+<body>
+
+  <h2>jQuery Demo!</h2>
+
+  <ul>
+    <li>Newt</li>
+    <li>Howler Monkey <a href="monkey.com">Monkey.com</a></li>
+    <li id="adorable">Pine Marten</li>
+  </ul>
+
+
+  <!-- <script type="text/javascript" src="lib/jquery-3.2.1.min.js"></script> -->
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+</body>
+</html>
+
+<!-- 
+Objectives
+- Select elements with $()
+- Use .css() to style elements
+
+
+Selecting with jQuery
+$("selectorGoesHere")
+- Selecting with jQuery is very similar to "querySelectorAll", in that we provide a CSS style selector and jQuery will return all matching elements
+- Only use $() to select, rather than having available all the vanilla js selector options
+- $() will always return a list, even if there's only one item
+//to select all img tags
+$("img")
+//to select all elements with class 'sale'
+$(".sale")
+//to select element with id "bonus"
+$("#bonus")
+//to select all a tags inside of li's
+$("li a")
+
+
+Manipulating Style
+.css(property, value)
+We select and then manipulate
+//select elem with id "special", and give it a border
+$("#special").css("border", "2px solid red");
+//vs vanilla js
+document.querySelector("#special").style.border = "2px solid red";
+
+//we can also pass in an object with styles
+//these styles are "backgroundColor" and not "background-color", cause they
+//refer to the DOM style properties rather than their CSS equivalents
+var style = {
+  backgroundColor: "pink",
+  fontWeight: "bold"
+}
+$("#special").css(styles);
+
+//can also do this without declaring a separate object
+$("#special").css({
+  backgroundColor: "pink",
+  fontWeight: "bold"  
+})
+
+
+Manipulating Style 
+.css(propery, value)
+We can syle multiple elements at once
+//select all li's and make them yellow
+$("li").css("color", "yellow");
+//vs vanilla js
+var lis = document.querySelectorAll("li");
+for(var i=0; i<lis.length; i++) {
+  lis[i].style.color = "green";
+}
+
+//select all elements with class "big"
+//and give them an orange border
+$(".big").css("border", "1px dashed orange");
+
+$("a").css("font-size", "40px");
+$("li").css({
+  fontSize: "10px",
+  border: "3px dashed purple",
+  backgroundColor: "rgba(89, 45, 20, 0.5)"
+});
+-->

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Selectors Intro</title>
+</head>
+<body>
+  <h1>Hello</h1>
+  <h1>Goodbye</h1>
+  <ul>
+    <li id="highlight">List Item 1</li>
+    <li class="bolded">List Item 2</li>
+    <li class="bolded">List Item 3</li>
+  </ul>
+
+
+  <script type="text/javascript">
+    var string = document.readyState;
+
+    //getElementById 
+    //takes a string argument and returns the one element
+    // with a matching ID
+    var tag = document.getElementById("highlight");
+    console.log(tag); //<li id="highlight">List Item 1</li>
+    console.dir(tag); //prints out tag as a JS object (how it's actually)
+
+
+    //getElementsbyClassName
+    //Takes a string argument and returns a list of 
+    //elements that have a matching class
+    var tags = document.getElementsByClassName("bolded");
+    console.log(tags);
+    //  [ <li class="bolded">List Item 2</li>,
+    // <li class="bolded">List Item 3</li>]
+    //This looks like an array, but technically it's a node list, 
+    //which is array-like (a light-weight array)
+
+    //We can do things like "tags[0]", tags.length, 
+    //but cannot do "tags.forEach"
+    console.log(tags[0]);  //<li class="bolded">List Item 2</li>
+
+
+    //getElementsByTagName
+    //Returns a list of all elements of a given tag name.
+    //like <li> or <h1>
+    var tags = document.getElementsByTagName("li");
+    console.log(tags[0]); //<li id="highlight">List Item 1</li>
+    //Can also do the following (only need the first, 
+    //because they are unique items)
+    var body = document.getElementsByTagName("body")[0];
+    var head = document.getElementsByTagName("head")[0];
+
+
+    //querySelector
+    //Returns the first element that matches a given 
+    //CSS-style selector
+    var tag = document.querySelector("#highlight");
+    //<li id="highlight">List Item 1</li>
+    var tag2 = document.querySelector(".bolded");
+    //<li class="bolded">List Item 2</li>
+    var tag3 = document.querySelector("h1");
+    //<h1>Hello</h1>
+    var tag4 = document.querySelector("li a.special");
+    //won't actually return anything for our html, but valid
+
+
+    //querySelectorAll
+    //Returns a list of elements that matches a given 
+    //CSS-style selector
+    var tags = document.querySelectorAll("h1");
+    //[ <h1>Hello</h1>, <h1>Goodbye</h1>]
+    var tags2 = document.querySelectorAll(".bolded");
+    // [ <li class="bolded">List Item 2</li>, 
+    // <li class="bolded">List Item 3</li>]    
+
+  </script>
+</body>
+</html>

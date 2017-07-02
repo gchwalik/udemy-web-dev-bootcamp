@@ -1,0 +1,163 @@
+DOM Manipulation
+We're going to cover different ways of:
+- changing an element's style
+- adding/removing classes
+- changing the content of a tag
+- changing attributes(src, href, etc.)
+
+
+
+Style
+The style property is one way to manipulate an element's style
+----
+//SELECT
+var tag = document.getElementById("highlight");
+
+//MANIPULATE
+//The right-hand side must be a string
+tag.style.color = "blue";
+tag.style.border = "10px solid red";
+tag.style.fontSize = "70px";
+tag.style.background = "yellow";
+tag.style.marginTop = "200px";
+----
+
+Is this a Bad Idea?
+It is recommended for styles to be defined in a separate file or files. 
+The style property allows for quick styling, for example for testing 
+purposes. - MDN
+
+Basically there will be some overlap for HTML, CSS, and JS, but 
+generally they should each have their own areas, and be kept as 
+separate as possible.
+
+An Alternative
+Rather than directly manipulating style with JS, we can
+definte a CSS class and then toggle it on or off with JS
+----
+/*DEFINE A CLASS IN CSS*/
+.some-class {
+  color: blue;
+  border: 10px solid red;
+}
+----
+//JAVASCRIPT
+var tag = document.getElementById("highlight");
+//ADD THE NEW CLASS TO THE SELECTED ELEMENT
+tag.classList.add("some-class");
+----
+
+classList
+A read-only list that contains the classes for a given element. 
+It is NOT AN ARRAY. Because so, we need to use 
+".add()" and ".remove()", instead of the other array functions
+----
+/*DEFINTE A CLASS IN CSS*/
+.another-class {
+  color: purple;
+  fontSize: 76px;
+}
+----
+//JS
+var tag = document.querySelector("h1");
+
+//Add a class to the selected element
+tag.classList.add("another-class");
+
+//Remove a class
+tag.classList.remove("another-class");
+
+//Toggle a class
+//If already has that class, then removes it
+//Else if does not have that class, then adds it
+tag.classList.toggle("another-class");
+----
+
+
+
+textContent
+Returns a string of all the text contained in a 
+given element
+----
+/*HTML*/
+<p>
+  This is an <strong>awesome</strong> paragraph
+</p>
+----
+//JS
+//Select the <p> tag
+var tag = document.querySelector("p");
+
+//Retrievee the textContent
+tag.textContent //"This is an awesome paragraph"
+
+//Alter the textContent
+//Updating the text like this will get rid of any 
+//lower-level styling, which can be a problem
+tag.textContent = "blah blah blah";
+----
+
+
+innerHTML
+Similar to textContent, except it returns a string
+of all the HTML contained in a given element
+----
+/*HTML*/
+<p>
+  This is an <strong>awesome</strong> paragraph
+</p>
+----
+//JS
+var tag = document.querySelector("p");
+
+tag.innerHTML
+//"This is an <strong>awesome</strong> paragraph"
+----
+
+Generally we also don't use textContent/innerHTML to 
+set anything,because we run into the same problem of 
+overwriting everything and removing formatting
+
+But we can use these on text-only pieces of our HTML,
+like on headers
+----
+document.querySelector("h1").textContent = "END OF THIS LESSON!";
+----
+
+Bonus Content
+Let's consider the different between textContent and innerHTML
+----
+document.body.innerHTML //returns for you the whole body, with all the tags
+
+document.body.textContent //only returns the text!
+
+//If you wanted to erase your whole HTML and replace it with
+//an h1 that simply said "Goodbye", you have to use innerHTML
+//This because textContent does not treat your RH string as HTML
+//innerHTML will treat your R string as HTML
+document.body.innerHTML = "<h1>Goodbye!</h1>"
+----
+
+
+Attributes
+Use getAttribute() and setAttribute() to read and write
+attributes like src or href
+----
+/*HTML*/
+<a href="www.google.com">I am a link</a>
+<img src="logo.png">
+----
+//JS
+var link = document.querySelector("a");
+link.getAttribute("href");  //"www.google.com"
+//CHANGE HREF ATTRIBUTE
+link.setAttribute("href", "http://www.dogs.com");
+//<a href="www.dogs.com">I am a link</a>
+
+//TO CHANGE THE IMAGE SRC
+var img = document.querySelector("img");
+img.setAttribute("src", "corgi.png");
+//<img src="corgi.png">
+----
+
+

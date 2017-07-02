@@ -1,0 +1,77 @@
+/* By styling the parent ul element
+   all children li elements inherit the styling */
+
+ul {
+  color: purple;
+}
+body {
+  color: red;
+}
+
+
+
+/* Specificity is the idea that we can have multiple styles 
+   targeting an element, and then the browser needs to decide
+   which will actually get applied. 
+
+   Generally it picks whichever is more specific. 
+   Ordering doesn't matter.
+
+   Specificity is the means by which browsers decide which 
+   CSS property values are the most relevant to an element and, 
+   therefore, will be applied. 
+
+   Specificity calculator:;
+   http://specificity.keegan.st/
+   */
+
+.highlight {
+  color: yellow;
+}
+
+#special {
+  color: pink;
+}
+
+/* Specificity ranking: */
+
+/*   
+  Type selectors are the least specific, for example
+  These have a Specificity of magnitude 1
+
+  li {
+
+  }
+
+  li a {
+
+  }
+
+  li + a {
+
+  }
+*/
+
+/* 
+  Class, Attribute, and Pseudo-Class Selectors 
+  These have a Specificity of magnitude 10
+
+  .hello {
+  
+  }
+
+  input[type="text"] {
+  
+  }
+
+  a:hover {}
+  input:checked {}
+*/
+
+/*
+  ID Selectors
+  The most specifity one of this set
+  These have specificity of magnitude 100
+
+  #special {}
+*/

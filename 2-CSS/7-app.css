@@ -1,0 +1,44 @@
+/*Colors using explicit names -> only 147*/
+h1 {
+  color: darkcyan;
+}
+/*
+  List of all the named colors, shown in big boxes
+  http://colours.neilorangepeel.com/
+*/
+
+/*
+  Colors using hex
+  The first two digits are for how much red
+  The second two digits are for how much green
+  The last two digits are for how much blue
+*/
+
+/*
+  Simple color-picking tool
+  looks like only gives back hex
+  http://www.colorpicker.com/
+*/
+li {
+  color:#D3D3D3;
+}
+
+/*
+  for rgb(r,g,b)
+  the numbers are in decimal
+  and follow the same pattern as hex numbers:
+  red, green, blue
+*/
+h4 {
+  color: rgb(250,27,217);
+}
+
+/*
+  Just like RGB, but with an alpha(transparent) channel
+  Ranges from 0.0 - 1.0
+  1.0 is completely opaque
+  0.0 is completely transparent
+*/
+h3 {
+  color: rgba(11,99,150,.6);
+}

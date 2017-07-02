@@ -1,0 +1,48 @@
+Intro to jQuery
+An Easier Way?
+
+Key Questions
+- What is jQuery?
+- What is a library?
+- Why would you use jQuery?
+- Why would you not use jQuery?
+--- http://youmightnotneedjquery.com/
+
+What is jQuery?
+It is the most popular js libary, period
+jQuery is a DOM manipulation library
+It helps us do things faster, and makes it easier to do those things
+
+Library
+We can take code that someone else wrote, and we can add it to our own project and use it inside of our own code.
+- jQuery is a single file that we can add to our project
+
+What is jQuery?
+It comes with a bunch of useful methods to things like:
+- Select Elements
+- Manipulate Elements
+- Create Elements
+- Add Event Listeners
+- Animate Elements
+- Add Effects
+- Make HTTP Requests (AJAX)
+
+Why Use iQuery?
+- Fixes "broken" DOM API
+- Brevity and Clarity
+- Ease of use
+- Cross-Browser Support
+- AJAX
+- Lots of people use jQuery! (good community/documentation/resources)
+
+Why Not Use jQuery?
+- The DOM API is no longer "broken"
+- It doesn't do anything you can't do on your own
+- It's an unnecessary dependancy
+- Performance (people can write more-inefficient code than they would've usign pure js)
+- Lots of people are moving away from jQuery!
+
+Vanilla JS = writing JS without jQuery
+
+jQuery?
+Either way, it's worth knowing.

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery Events</title>
+  <script type="text/javascript" src="lib/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+
+  <h1>jQuery Events</h1>
+
+  <input type="text">
+
+  <button>Don't Click Me</button>
+  <button id="submit">Seriously Don't Click Me</button>
+  <button>This is your last warning</button>
+
+
+  <script type="text/javascript">
+    //prints when item with id 'sumbit' is clicked
+    $('#submit').click(function() {
+      console.log("Another click");
+    });
+    //alerts when ANY button is clicked
+    $('button').click(function() {
+      //use $() to create a jquery object
+      //in order to call .css(), we need to also
+      //wrap 'this' in $()
+      $(this).css("background", "pink");
+    });
+
+    $("input").keypress(function() {
+      console.log("you pressed a key");
+    });
+
+    $("input").keypress(function(event) {
+      if(event.which === 13) {
+        alert("you hit enter");
+      }
+    });
+
+    $("h1").on("click", function() {
+      $(this).css("color", "purple");
+    });
+    $("input").on("keypress", function() {
+      console.log("key pressed");
+    });
+    $("button").on("mouseenter", function() {
+      $(this).css("font-weight", "bold");
+    });
+    $("button").on("mouseleave", function() {
+      $(this).css("font-weight", "normal");
+    });
+  </script>
+</body>
+</html>
+
+<!--  
+jQuery Events
+Making things Interactive - like adding Event Listeners
+- click()
+- keypress()
+- on()  (use 99% of the time?)
+
+
+click()
+jQuery's click() method is a quick and easy way to add a 
+click listener to element(s)
+//prints when item with id 'sumbit' is clicked
+$('#submit').click(function() {
+  console.log("Another click");
+});
+//alerts when ANY button is clicked
+$('button').click(function() {
+  alert("Someone clicked a button");
+});
+
+
+keypress()
+jQuery's keypress() method is a quick and easy
+way to add a keypress listener to element(s)
+//listen for any keypress in any text input
+$('input[type="text"]').keypress(function() {
+  alert("text input keypress!");
+});
+
+keyup()
+keydown()
+keypress()
+The above methods are all pretty common, and
+- keydown() triggers when a key is depressed (shift+a)
+- keyup() triggers when a key is released (shift+a)
+- keypress() is sort of an in between (A)
+
+
+on()
+jQuery's on() works similarly to addEventListener.
+It lets you specify the type of event to listen for.
+By far the most-used jquery event method
+
+//prints when item with id 'submit' is clicked
+$('#submit').on('click', function() {
+  console.log("Another click");
+});
+
+//alerts when ANY button is clicked
+$("button").on("click", function() {
+  console.log("button clicked!");
+});
+
+It's not just for click events. on() supports all 
+types of events
+
+//double click event
+$("button").on("dblclick", function() {
+  alert("double");
+});
+
+//drag start event
+$("a").on("dragstart", function() {
+  console.log("drag started");
+});
+
+//keypress event
+$('input[type="text"]').on('keypress', function() {
+  alert("key press in an input");
+});
+
+
+Why use on()?
+In most cases, click() and on('click') will both get 
+the job done. HOWEVER, there is one key difference:
+- click() only adds listeners for existing elements
+- on() will add listeners for all potential future elements
+-->

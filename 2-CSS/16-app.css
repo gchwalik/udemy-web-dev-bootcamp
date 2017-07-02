@@ -1,0 +1,23 @@
+body {
+  text-align: center;
+}
+
+div {
+  width: 50%;
+  margin: 0 auto;
+}
+
+table {
+  margin: 0 auto;
+}
+
+tr {
+  height: 100px;
+
+}
+
+td {
+  width: 100px;
+  border: 1px solid green;
+}
+

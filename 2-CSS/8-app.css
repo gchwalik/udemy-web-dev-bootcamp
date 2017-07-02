@@ -1,0 +1,30 @@
+h4 { 
+  background: rgb(255,100,80);
+}
+
+/*Can set background to be an image*/
+/*If the image is too small, it will by-default tile*/
+body {
+  background: url(http://www.decotonesurfaces.com/images/Products/FM460.jpg);
+  /*If we don't want the background to tile, set as follows*/
+  background-repeat: no-repeat;
+  /*Can stretch background image to cover page with one tile*/
+  background-size: cover;
+}
+
+/*Can set background to be a color*/
+body {
+  background: pink;
+}
+
+/*Border in CSS has 3 parts: width, color, style*/
+h1 {
+  color: rgba(0,200,100,.8);
+/*  
+  border-color: purple;
+  border-width: 5px;
+  border-style: solid;*/
+  /*https://developer.mozilla.org/en-US/docs/Web/CSS/border-style*/
+
+  border: 5px solid purple;
+}

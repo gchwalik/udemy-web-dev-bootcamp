@@ -1,0 +1,69 @@
+/*
+  In a document, each element is represented as a rectangular box.
+  In CSS, each of these rectangular boxes is described using 
+  the standard "box model".
+  Each box has four edges: the margin edge (orange in inspector), 
+  border edge, padding edge (green), and content edge (blue).
+
+  Padding is the space between the content and the border
+  Margin is the space between the border and other outside elements
+*/
+
+p {
+  /*Content - Width and Height*/
+  /*Can specify width and height with: 
+    px - exact size in pixels 
+    % - percentage of the parent element
+  */
+  width: 50%;
+  height: 20px;
+
+
+
+  /*Border*/
+  border: 2px solid blue;
+
+  /*
+  border: <'border-width'> || <'border-style'> || <'border-color'>;
+  "||" means that at least one of the options must appear, 
+  and they may appear in any order
+  */
+
+
+  /*Padding*/
+  /*Padding set on all 4 sides*/
+  padding: 10px;
+
+  /*Apply to all four sides 
+  padding: 1em;
+
+  vertical | horizontal
+  padding: 5% 10%;
+
+  top | horizontal | bottom
+  padding: 1em 2em 2em; 
+
+  top | right | bottom | left
+  padding: 2px 1em 0 1em;*/
+
+
+
+  /*Margin*/    
+  margin: 100px;
+
+  /*Apply to all four sides
+  margin: 1em;
+
+  vertical | horizontal
+  margin: 5% auto;
+
+  top | horizontal | bottom
+  margin: 1em auto 2em; 
+
+  top | right | bottom | left
+  margin: 2px 1em 0 auto;*/
+
+  /*Always need 'px', unless the number is 0*/
+  margin: 0 auto 0 auto;
+  margin: 0 auto;
+}

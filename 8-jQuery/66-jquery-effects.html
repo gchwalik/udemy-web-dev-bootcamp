@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery Effects</title>
+  <script type="text/javascript" src="lib/jquery-3.2.1.min.js"></script>
+
+  <style type="text/css">
+    .tile {
+      width: 100px;
+      height: 100px;
+      background: teal;
+      margin: 20px;
+      float: left;
+    }
+    .two, .five {
+      background: pink;
+      display: none;
+    }
+    .three {
+      background: red;
+    }
+    .wrapper {
+      clear: both;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrapper">
+    <div class="tile one">Fade Out</div>
+    <div class="tile two">Fade In</div>
+    <div class="tile three">Fade Toggle</div>    
+  </div>
+  <div class="wrapper">
+    <div class="tile four">Slide Up</div>
+    <div class="tile five">Slide Down</div>
+    <div class="tile six">Slide Toggle</div>    
+  </div>
+
+  <button>Click Me</button>
+
+  <script type="text/javascript">
+    //when running the following method, fadeout takes a default of 1000
+    //jquery starts to fade, but then moves on to the next logic
+    //so "completed" gets logged before the fade completes (or really starts)
+    $("button").on("click", function() { 
+      $("div.one").fadeOut();
+    //  console.log("completed");
+    });    
+
+    //we can use a callback function on .fadeOut(), 
+    //that only gets called when the fadeOut method completes
+    $("button").on("click", function() { 
+      $("div.one").fadeOut(1000, function() {
+        console.log("completed");
+        $(this).remove();
+      });
+    });
+
+    $("button").on("click", function() {
+      $("div.two").fadeIn(1000, function() {
+        console.log("faded in");
+      });
+    });
+
+    $("button").on("click", function() {
+      $("div.three").fadeToggle(1000, function() {
+        console.log("faded toggle");
+      });
+    });
+
+    $("button").on("click", function() {
+      $("div.four").slideUp();
+    });        
+
+    $("button").on("click", function() {
+      $("div.five").slideDown();
+    });        
+
+    $("button").on("click", function() {
+      $("div.six").slideToggle();
+    });        
+
+
+  </script>
+</body>
+</html>
+
+<!-- 
+We're going to play with a bunch of different jQuery effects:
+- .fadeOut()
+- .fadeIn()
+- .fadeToggle()
+- .slideDown()
+- .slideUp()
+- .slideToggle()
+
+
+.fadeOut([duration][, complete])
+Hide the matched elements by fading them to transparent
+- where duration is a number in ms or a string like "fast" or "slow"
+- where complete is a callback function
+
+fadeOut() doesn't delete/remove the elements from the DOM, instead
+it simply sets their display to "none"
+
+.slideDown()
+animates the height of the element, makes visible a hidden element
+.slideUp()
+hides a visible element
+-->

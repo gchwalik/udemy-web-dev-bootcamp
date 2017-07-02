@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My title</title>
+</head>
+<body>
+  <a href="someLink">My link</a>
+  <h1>My header</h1>
+
+  <script type="text/javascript">
+    var h1 = document.querySelector("h1");
+    h1.style.color = "pink";
+
+    var body = document.querySelector("body");  //SELECT
+    var isBlue = false;
+
+    setInterval(function() {    //MANIPULATE
+      if(isBlue) {
+        body.style.background = "white";
+      }
+      else {
+        body.style.background = "#3498db";
+      }
+      isBlue = !isBlue;
+    }, 1000);
+
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery Methods</title>
+  <script type="text/javascript" src="lib/jquery-3.2.1.min.js"></script>
+  <style type="text/css">
+    .correct {
+      color: green;
+    }
+    .wrong {
+      color: red;
+      background: pink;
+    }
+    .done {
+      color: gray;
+      text-decoration: line-through;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>jQuery Methods Demo Page</h1>
+
+  <input type="text" placeholder="your name">
+
+  <select>
+    <option>Ostrich</option>
+    <option>Turtle</option>
+    <option>Toad</option>
+  </select>
+
+  <ul>
+    <li>Skittles</li>
+    <li>Starburst</li>
+    <li>Twix</li>
+  </ul>
+
+  <img src="http://i.imgur.com/zvANQeG.jpg">
+  <img src="http://i.imgur.com/zvANQeG.jpg">
+  <img src="http://i.imgur.com/zvANQeG.jpg">
+
+  <script type="text/javascript">
+    $("h1").text();     
+    //"jQuery Methods Demo Page"
+    $('ul').text(); 
+    // "
+    //   Skittles
+    //   Starburst
+    //   Twix
+    // "
+    $('li').text();
+    //"SkittlesStarburstTwix"
+    $('h1').text('New Text!!!');   
+    //Updates the h1 to use this new text value
+
+    //$('li').text("Rusty, Colt's dog, is adorable");
+    //Updates the text value of all lis
+
+    //$('ul').html("<li>I hacked your ul</li><li>Here's another li</li>");
+    //replaces the html contents of the ul tag with the html provided as an argument
+
+
+
+    $('img').css("width", "200px");
+
+    $('img').attr("src");
+    $('img:first-of-type').attr("src", "https://c1.staticflickr.com/3/2418/2243463214_f32ab004af_b.jpg");
+    $('img').last().attr("src", "https://c1.staticflickr.com/3/2418/2243463214_f32ab004af_b.jpg")
+
+    $("input").attr("type");
+    $("input").attr("type", "color");
+    $("input").attr("type", "checkbox");
+    $("input").attr("type", "text");
+
+    $("select").val();    
+    $("select").val("");
+
+
+    $("h1").addClass("correct");
+    $("h1").removeClass("correct");
+    $("li").addClass("wrong");
+
+    $("li").toggleClass("correct");
+    $("li").first().toggleClass("done");
+    $("li").toggleClass("done");
+
+  </script>
+</body>
+</html>
+
+<!-- 
+Common jQuery Methods
+"Getter and Setter Paradigm"
+- val()
+- text()
+- attr()
+- html()
+- addClass()
+- removeClass()
+- toggleClass()
+
+
+ele.text()
+Works just like ele.textContent in vanilla js
+Considered "html-safe", so it keeps your site more secure
+$("h1").text() 
+-> "jQuery Methods Demo Page"
+$('ul').text(); 
+-> "
+    Skittles
+    Starburst
+    Twix
+   "
+$('li').text();
+-> "SkittlesStarburstTwix"
+
+Can use text() to update text values
+$('h1').text('New Text!!!');   
+-> updates the h1 to now display "New Text!!!"
+
+Can use the $() selector to select and update the text content
+of all lis at once:
+$('li').text("Rusty, Colt's dog, is adorable");
+
+
+ele.html()
+Works just like ele.innerHTML in vanilla js
+$('ul').html();
+-> "
+    <li>Rusty, Colt's dog, is adorable</li>
+    <li>Rusty, Colt's dog, is adorable</li>
+    <li>Rusty, Colt's dog, is adorable</li>
+   "
+$('ul').html("<li>I hacked your ul</li><li>Here's another li</li>");
+-> replaces the html contents of the ul tag with the html provided as an argument
+
+$('li').html('<a href="google.com">Google</a>');
+
+
+ele.attr()
+Get the value of an attribute for the first element in the set of matched elemenets or set one or more attributes for every matched element
+If we only set one parm, like "src", then it only returns the value of "src"
+If we set two parms, like "type" and "color", then it sets the value of "type" to "color"
+
+
+ele.val()
+Get the current value of the first element in the set of matched elements or set the value of every matched element
+Primarily used to get the values of form elements such as input, select and textarea. When called on an empty collection, it returns undefined.
+Works just like ele.value in vanilla js
+Common use case for "setter" functionality is if the user submitted and we wanted to clear the value
+
+//If text input is empty/blank, then
+$("input").val();
+-> ""
+//If it contains the string "hello world", then
+$("input").val();
+-> "hello world"
+$("input").val("goodnight moon");
+//Resets the text input to now say "goodnight moon" instead of "hello world"
+
+Common use case for "setter" functionality is if the user submitted and we wanted to clear the value
+$("input").val("");
+
+Works on all elements that have a value attributes, works on things like
+- checkboxes
+- text inputs 
+- color inputs
+- dropdown menus
+
+
+Manipulating classes
+.addClass()
+like ele.classList.add("class") in vanilla js
+
+.removeClass()
+like ele.classList.remove("class") in vanilla js
+
+.toggleClass()
+like ele.classList.toggle("class") in vanilla js
+
+-->

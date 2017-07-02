@@ -1,0 +1,70 @@
+https://code.tutsplus.com/tutorials/the-30-css-selectors-you-must-memorize--net-16048*/
+/* Element */
+li {
+
+}
+
+/* Class */
+.hello {
+
+}
+
+/* id */
+#name {
+
+}
+
+/* Star */
+/* Shouldn't use this very frequently*/
+* {
+  border: 1px solid lightgrey;
+}
+
+/* Descendant Selector */
+/* Will see this all the time*/
+/* syntax: selector1 selector2 { style properties } */
+li a {
+  color: red;
+}
+
+ul .hello {
+  background: skyblue;
+}
+
+/* Adjacent Selector */
+/* selects same-level elements that come immediately after */
+/* so in this case, all uls that immediately follow h4s, but aren't nested*/
+h4 + ul {
+  border: 4px solid red;
+}
+
+/* Attribute Selector */
+/* Attribute selectors select an element using
+   the presence of a given attribute or attribute value. */
+a[href="http://www.google.com"] {
+  background: pink;
+}
+
+/*
+Examples:
+input[type="text"] {
+  background: blue;
+}
+input[type="checkbox"] {
+  background: blue;
+}
+*/
+
+/* nth of type */
+/* selects the nth element in its group */
+ul:nth-of-type(3) {
+  border: 4px solid purple;
+}
+
+li:nth-of-type(3) {
+  text-decoration: line-through;
+}
+
+li:nth-of-type(even) {
+  color: plum;
+}

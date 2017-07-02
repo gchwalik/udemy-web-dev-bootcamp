@@ -1,0 +1,71 @@
+Objectives
+- Define what the DOM is
+- Understand why DOM Manipulation is awesome
+- List a few examples of sites that use JS to manipulate the DOM
+- Understand the SELECT, then MANIPULATE workflow
+
+The DOM: Document Object Model
+The Document Object Model is the interface between 
+your Javascript and HTML+CSS
+
+
+The browser turns every HTML tag into a Javascript object
+that we can manipulate
+----
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My title</title>
+</head>
+<body>
+  <a href="someLink">My link</a>
+  <h1>My header</h1>
+</body>
+----
+                 Document
+                    |
+             Root element: <html>
+    _______________|___________________________
+    |                                         |
+ Element:                                   Element: 
+ <head>                                      <body>
+    |                                  _________|____________
+ Element:                             |                     |
+ <title>      Attribute: "href" -- Element: <a>         Element: <h1>
+    |                                 |                     |
+  Text:                             Text:                 Text:
+"My title"                        "My link"             "My header"
+
+----
+Everything is stored inside of the document object
+
+Can use the following to print out the document as a javascript object
+- console.dir(document)
+
+
+Exercise: Open up the JS console and try these 4 lines:
+----
+document.URL;
+document.head;
+document.body;
+document.links;
+----
+
+Methods
+The document comes with a bunch of methods for selecting elements.
+(Look at 51-selector-methods.html for an example)
+
+We're going to learn about the following 5:
+----
+document.getElementById()
+document.getElementsByClassName()
+document.getElementsByTagName()
+document.querySelector()
+document.querySelectorAll()
+
+----
+document.getElementById("highlight");
+Takes a string argument and returns the one element with a matching ID
+
+document.getElementsByClassName("bolded");
+Takes a string argument and returns a list of elements that have a matching class

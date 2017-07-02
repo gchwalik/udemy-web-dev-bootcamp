@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Circles</title>
+  <script type="text/javascript" src="paper-full.js"></script>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+
+  <canvas id="myCanvas" resize="true"></canvas>
+  <script type="text/paperscript" canvas="myCanvas">
+    for(var i=0; i<10; i++) {
+      for(var j=0; j<10; j++) {
+        new Path.Circle(new Point(i*100, j*100), 10).fillColor = 'blue';    
+      }
+    }
+  </script>
+</body>
+</html>
+
+<!--  
+Sound from
+https://github.com/jonobr1/Neuronal-Synchrony
+-->

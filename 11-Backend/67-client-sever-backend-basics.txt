@@ -1,0 +1,5 @@
+Intro to Backend
+- Review Internet Basics
+- Static vs Dynamic Sites
+- Stacks/Backend Technologies
+

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Register Form</title>
+</head>
+<body>
+
+  <h1>Register</h1>
+
+  <form>
+
+    <div>
+      <label for="firstname">First Name:</label>
+      <input type="text" id="firstname" name="firstname" placeholder="John" required>
+      <label for="lastname">Last Name:</label>
+      <input type="text" id="lastname" name="lastname" placeholder="Smith" required>
+    </div>
+
+    <div>
+      <label for="male">Male</label>
+      <input type="radio" name="gender" id="male" value="male">
+      <label for="female">Female</label>
+      <input type="radio" name="gender" id="female" value="female">
+      <label for="other">Other</label>
+      <input type="radio" name="gender" id="other" value="other">
+    </div> 
+
+    <!-- name="email" is used to send data -->
+    <!-- in this case name acts like the key in the key-value pair -->
+    <!-- id is used to link together labels in this example -->
+    <div>
+       <label for="email">Email:</label>
+      <input type="email" name="email" id="email" placeholder="your email" required> 
+      <label for="password">Password:</label>
+      <input type="password" name="password" id="password" placeholder="your password" max=10 min=5 required>
+    </div>
+
+    <div>
+      <label>
+        Birthday:
+        <select name="month">
+          <option>Month</option>
+          <option>January</option>
+          <option>February</option>
+          <option>March</option>
+        </select>
+        <select name="day">
+          <option>Day</option>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+        </select>
+        <select name="year">
+          <option>Year</option>
+          <option>1980</option>
+          <option>1990</option>
+          <option>2000</option>
+        </select>
+      </label>
+    </div>
+
+    <div>
+      <label for="terms">I agree to the terms and conditions</label>
+      <input id="terms" name="terms" type="checkbox" required>      
+    </div>
+ 
+    <input type="submit">
+
+  </form>
+
+</body>
+</html>

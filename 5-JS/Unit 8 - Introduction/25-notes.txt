@@ -1,0 +1,153 @@
+4 Main Objectives
+
+Objective 1: Evaluate JS using the developer console
+Objective 2: List the 5 JS primitives
+Objective 3: Define variables with the var keyword
+Objective 4: Write code using: console.log, alert, prompt
+
+--------
+
+Objective 1:
+The developer console is found in the same way as the Inspecter
+Can right-click and hit "Inspect", and then switch to the tab that says "Console
+Also Command+Option+j on mac or Ctrl+Shift+J on Windows
+
+--------
+
+Objective 2:
+- Introduce the 5 primitive data types
+- Work with numbers and numeric operators
+- Work with strings and common string methods
+
+--
+
+Javascript has dynamic typing, which means you can have
+var temp = "hello"
+temp = 73
+and it will actually switch from a string to a number
+
+Javascript var names tend to be camelcase
+
+
+//Numbers
+JS doesn't care if the number is whole, negative, or fractional, it defines them all as just numbers
+4
+9.3
+-10
+
+//Strings
+"Hello World"
+"43"
+
+//Booleans
+true
+false
+
+//null and undefined
+These are just values, there is only one null and one undefined
+null
+undefined
+
+--
+
+//Numbers
+4
+9.3
+-1
+
+//We can do some math
+Follows PEMDAS, but not sure if exponential exists
+4 + 10    //14
+4+10      //14
+1 - 54    //-53
+1 / 5     //0.2
+2 * 10    //10
+
+//Modulo - remainder operator
+10 % 3    //1
+24 % 2    //0
+15 % 11   //4
+
+--
+
+//Strings
+
+//Single or Double quotes OK
+- But regardless of what you use, it returns it with double quotes
+"hello world"
+'hello world'
+
+//Concatenation
+"charlie" + "brown"   //charliebrown
+
+//Escape Characters start with "\"
+"Singing \"Do wah diddy, dum diddy do\" "
+"This is a backslash: \\"
+
+//Strings have a length property
+"hello world".length    //11
+
+//Access individual characters using [] and an index
+"hello"[0]      //"h"
+"hello"[4]      //"o"
+
+--------
+
+Objective 3: 
+
+//Variables are simply containers that store values 
+//They follow this pattern:
+var yourVariableName = yourValue;
+
+//They can store all of the values we've seen
+var name = "Rusty";
+var secretNumber = 73;
+var isAdorable = true;
+
+//Recall the stored value by calling the variable name
+var name = "Rusty";
+"hello there " + name     //"hello there Rusty"
+
+var num = 37
+num + 3 + 10      //50
+
+//We can also update exisitng variables
+var name = "Robert";
+name = "Bob";
+
+--
+
+//The two other primitives are null and undefined
+
+//Variables that are declared bu not
+//Initialized are undefined
+//The following variables are undefined:
+var name;
+var age;
+
+//null is "explicitly nothing"
+var currentPlayer = "charlie";
+currentPlayer = null;     //game over
+
+--
+
+//Clear the console@
+clear()
+
+--------
+
+//alert
+//Creates a popup with the evaluation of whatever's inside
+alert("Hello there!!");
+alert(12345);
+alert(198 * 345);
+
+//prompt
+//makes a popup with a prompt/text input
+prompt("what is your name?");
+var userName = prompt("what is your name?");
+
+//console.log
+//Prints something to the javascript console
+console.log(12/3)     //4
+ 
