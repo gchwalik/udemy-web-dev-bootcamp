@@ -1,0 +1,15 @@
+{
+  "name": "templates-and-ejs",
+  "version": "1.0.0",
+  "description": "* Use res.render() to render HTML(from an EJS file) * Explain what EJS is and why we use it * Pass variables to EJS templates",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.5.6",
+    "express": "^4.15.3"
+  }
+}

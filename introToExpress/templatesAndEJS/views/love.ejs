@@ -1,0 +1,14 @@
+<!--
+	<%= %> - whatever is added inside these tags is evaluated and added to the HTML
+	<% %> - just runs the code, used more for control flows
+-->
+
+<% include partials/header %>
+
+<h1>You fell in love with: <%= thingVar %></h1>
+
+<% if(thingVar.toLowerCase() === "hat") { %>
+   <p>Good Choice!</p> 
+<% } %>  <!-- ex: we don't want to display this '}' in the HTML -->
+
+<% include partials/footer %>
